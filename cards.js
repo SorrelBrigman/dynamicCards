@@ -17,10 +17,10 @@ var newCardCreation = function () {
       //new card has
     //html for new card
         //text from inputbox
-      var newCard = `<div class="col-sm-6">
+      var newCard = `<div class="col-sm-4">
     <div class="card card-block">
       <p class="card-text">${userText}</p>
-      <a href="#" class="btn btn-primary">Delete</a>
+      <a href="#" class="btn btn-primary delete">Delete</a>
     </div>
     </div>`
 
@@ -34,7 +34,8 @@ var newCardCreation = function () {
 //delete button function
 
 var deleteButton = function() {
-
+  console.log("deleteButton");
+  $(this).parentsUntil("#cardHolder").remove();
 }
 
 // event listeners
@@ -42,3 +43,6 @@ var deleteButton = function() {
 //on click of create button, newCardCreation function is run
 
 $(".create").click(newCardCreation);
+
+//on click of delete button, card is deleted
+$("a").click(deleteButton);
