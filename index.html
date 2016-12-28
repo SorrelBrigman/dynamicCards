@@ -3,10 +3,26 @@
   <head>
     <meta charset="UTF-8">
     <title>Dynamic Cards</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="cards.css">
   </head>
   <body>
+    <div class="container">
+      <div id="inputField">
+        <div class="row">
+           <div class="form-group col-md-6">
+              <label class="text-center" for="cardInput">Card Text</label>
+              <textarea class="form-control" id="creationCard" rows="5" cols="10" autofocus="true"></textarea>
+              <button type="submit" class="btn btn-primary btn-block">Create</button>
+          </div> <!-- end of form-group -->
+        </div> <!-- end of row -->
+      </div> <!-- end of inputField div -->
+        <div id="cardHolder" class="row">
 
+        </div> <!-- end of cardHolder and row -->
+    </div> <!-- end of container -->
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
    <script type="text/javascript" src="cards.js"></script>
   </body>
 </html>
