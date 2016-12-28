@@ -1,15 +1,44 @@
+//Global Variables
+
+var userText = "";
+
+
 //take value of input box
+var inputText = function () {
+  userText = $("#creationCard").val();
+  return userText;
+}
+
 
 //put in new bootstrap card
-  //new card has
+var newCardCreation = function () {
+    //gathers userInput
+    inputText();
+      //new card has
     //html for new card
-      var newCard = <div class="col-sm-6">
+        //text from inputbox
+      var newCard = `<div class="col-sm-6">
     <div class="card card-block">
-      <h3 class="card-title">Special title treatment</h3>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <p class="card-text">${userText}</p>
+      <a href="#" class="btn btn-primary">Delete</a>
     </div>
-    //text from inputbox
-    //delete button
+    </div>`
+
+
+    //added to new card
+    $("#cardHolder").append(newCard);
+    //resets input textarea to blank
+    $("#creationCard").val("");
+}
 
 //delete button function
+
+var deleteButton = function() {
+
+}
+
+// event listeners
+
+//on click of create button, newCardCreation function is run
+
+$(".create").click(newCardCreation);
