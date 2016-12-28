@@ -29,6 +29,8 @@ var newCardCreation = function () {
     $("#cardHolder").append(newCard);
     //resets input textarea to blank
     $("#creationCard").val("");
+    //on click of delete button, card is deleted "binding" event listener to new card
+    $(".delete").click(deleteButton);
 }
 
 //delete button function
@@ -45,4 +47,4 @@ var deleteButton = function() {
 $(".create").click(newCardCreation);
 
 //on click of delete button, card is deleted
-$("a").click(deleteButton);
+$(".delete").click(deleteButton);
